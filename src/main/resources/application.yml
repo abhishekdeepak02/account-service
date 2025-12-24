@@ -20,3 +20,12 @@ build:
   version: "1.0"
 server:
   port: 8080
+
+account:
+  message: Welcome to Lazy Bank Service"
+  contactDetails:
+    name: "Abhishek Deepak - Developer"
+    phone: "+91-9876543210"
+  onCallSupport:
+    - (555) 123-4567
+    - (555) 987-6543

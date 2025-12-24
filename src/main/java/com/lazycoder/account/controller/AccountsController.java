@@ -1,6 +1,7 @@
 package com.lazycoder.account.controller;
 
 import com.lazycoder.account.constants.AccountsConstants;
+import com.lazycoder.account.dto.AccountContactRecordInfo;
 import com.lazycoder.account.dto.CustomerDto;
 import com.lazycoder.account.dto.ErrorResponseDto;
 import com.lazycoder.account.dto.ResponseDto;
@@ -42,6 +43,9 @@ public class AccountsController {
 
     @Autowired
     private Environment environment;
+
+    @Autowired
+    private AccountContactRecordInfo accountContactRecordInfo;
 
     @Operation(
             summary = "Create Account REST API",
@@ -210,6 +214,29 @@ public class AccountsController {
         return ResponseEntity
                 .ok(new ResponseDto(AccountsConstants.STATUS_200,
                         "Java Version: " + environment.getProperty("JAVA_HOME")));
+    }
+
+
+    @Operation(
+            summary = "Fetch Contact info of Accounts REST API",
+            description = "REST API to get the current contact info of the Accounts Service."
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "HTTP Status OK"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status INTERNAL SERVER ERROR",
+                    content = @Content(
+                            schema = @Schema(implementation = ErrorResponseDto.class)
+                    )
+            )
+    })
+    @GetMapping("/contact-info")
+    public ResponseEntity<AccountContactRecordInfo> getContactInfo() {
+        return ResponseEntity.status(HttpStatus.OK).body(accountContactRecordInfo);
     }
 
 }
