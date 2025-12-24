@@ -13,7 +13,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +39,9 @@ public class AccountsController {
 
     @Value("${build.version}")
     private String buildVersion;
+
+    @Autowired
+    private Environment environment;
 
     @Operation(
             summary = "Create Account REST API",
@@ -181,6 +186,30 @@ public class AccountsController {
     @GetMapping("/version")
     public ResponseEntity<ResponseDto> getBuildVersion() {
         return ResponseEntity.ok(new ResponseDto(AccountsConstants.STATUS_200, "Build Version: " + buildVersion));
+    }
+
+    @Operation(
+            summary = "Get Java Version REST API",
+            description = "REST API to get the current Java version of the Accounts Service."
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "HTTP Status OK"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status INTERNAL SERVER ERROR",
+                    content = @Content(
+                            schema = @Schema(implementation = ErrorResponseDto.class)
+                    )
+            )
+    })
+    @GetMapping("/java-version")
+    public ResponseEntity<ResponseDto> getJavaVersion() {
+        return ResponseEntity
+                .ok(new ResponseDto(AccountsConstants.STATUS_200,
+                        "Java Version: " + environment.getProperty("JAVA_HOME")));
     }
 
 }
