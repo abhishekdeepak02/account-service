@@ -16,15 +16,24 @@ spring:
       ddl-auto: update
     show-sql: true
 
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "qa"
+
 build:
-  version: "1.0"
+  version: "3.0"
 server:
   port: 8080
 
 account:
-  message: Welcome to Lazy Bank Service"
+  message: Welcome to Lazy Bank Dev - Account"
   contactDetails:
     name: "Abhishek Deepak - Developer"
+    email: "abhishek@lazybank.co.in"
     phone: "+91-9876543210"
   onCallSupport:
     - (555) 123-4567
