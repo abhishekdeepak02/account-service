@@ -1,6 +1,6 @@
 spring:
   application:
-    name: account-service
+    name: accounts
 
   datasource:
     url: jdbc:h2:mem:testdb
@@ -15,26 +15,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-  config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
-  profiles:
-    active:
-      - "qa"
-
-build:
-  version: "3.0"
-server:
-  port: 8080
-
-account:
-  message: Welcome to Lazy Bank Dev - Account"
-  contactDetails:
-    name: "Abhishek Deepak - Developer"
-    email: "abhishek@lazybank.co.in"
-    phone: "+91-9876543210"
-  onCallSupport:
-    - (555) 123-4567
-    - (555) 987-6543
