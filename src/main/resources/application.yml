@@ -1,6 +1,6 @@
 spring:
   application:
-    name: "account"
+    name: "accounts"
   profiles:
     active: "prod"
   datasource:
@@ -16,3 +16,5 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import: "optional:configserver:http://localhost:8071/"
