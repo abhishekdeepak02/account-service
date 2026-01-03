@@ -1,4 +1,4 @@
-package com.lazycoder.account.entity;
+package com.lazybytes.account.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

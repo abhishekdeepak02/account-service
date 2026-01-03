@@ -1,4 +1,4 @@
-package com.lazycoder.account.audit;
+package com.lazybytes.account.audit;
 
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

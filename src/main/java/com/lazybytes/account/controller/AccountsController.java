@@ -1,11 +1,11 @@
-package com.lazycoder.account.controller;
+package com.lazybytes.account.controller;
 
-import com.lazycoder.account.constants.AccountsConstants;
-import com.lazycoder.account.dto.AccountContactRecordInfo;
-import com.lazycoder.account.dto.CustomerDto;
-import com.lazycoder.account.dto.ErrorResponseDto;
-import com.lazycoder.account.dto.ResponseDto;
-import com.lazycoder.account.service.IAccountsService;
+import com.lazybytes.account.constants.AccountsConstants;
+import com.lazybytes.account.dto.AccountContactRecordInfo;
+import com.lazybytes.account.dto.CustomerDto;
+import com.lazybytes.account.dto.ErrorResponseDto;
+import com.lazybytes.account.dto.ResponseDto;
+import com.lazybytes.account.service.IAccountsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

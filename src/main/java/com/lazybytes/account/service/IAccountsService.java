@@ -1,6 +1,6 @@
-package com.lazycoder.account.service;
+package com.lazybytes.account.service;
 
-import com.lazycoder.account.dto.CustomerDto;
+import com.lazybytes.account.dto.CustomerDto;
 
 public interface IAccountsService {
 

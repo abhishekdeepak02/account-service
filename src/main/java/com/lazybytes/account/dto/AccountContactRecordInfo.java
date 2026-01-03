@@ -1,4 +1,4 @@
-package com.lazycoder.account.dto;
+package com.lazybytes.account.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
-package com.lazycoder.account.mapper;
+package com.lazybytes.account.mapper;
 
-import com.lazycoder.account.dto.CustomerDto;
-import com.lazycoder.account.entity.Customer;
+import com.lazybytes.account.dto.CustomerDto;
+import com.lazybytes.account.entity.Customer;
 
 public class CustomerMapper {
 

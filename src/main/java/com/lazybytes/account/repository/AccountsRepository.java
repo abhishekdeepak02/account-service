@@ -1,6 +1,6 @@
-package com.lazycoder.account.repository;
+package com.lazybytes.account.repository;
 
-import com.lazycoder.account.entity.Accounts;
+import com.lazybytes.account.entity.Accounts;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

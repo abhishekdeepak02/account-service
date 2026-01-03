@@ -1,4 +1,4 @@
-package com.lazycoder.account.constants;
+package com.lazybytes.account.constants;
 
 public class AccountsConstants {
 
