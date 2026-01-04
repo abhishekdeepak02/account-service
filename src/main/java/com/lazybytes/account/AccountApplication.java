@@ -1,6 +1,6 @@
 package com.lazybytes.account;
 
-import com.lazycoder.account.dto.AccountContactRecordInfo;
+import com.lazybytes.account.dto.AccountContactRecordInfo;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;

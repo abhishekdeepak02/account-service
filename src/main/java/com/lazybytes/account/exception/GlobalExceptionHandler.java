@@ -1,6 +1,6 @@
-package com.lazycoder.account.exception;
+package com.lazybytes.account.exception;
 
-import com.lazycoder.account.dto.ErrorResponseDto;
+import com.lazybytes.account.dto.ErrorResponseDto;
 import org.jspecify.annotations.Nullable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
