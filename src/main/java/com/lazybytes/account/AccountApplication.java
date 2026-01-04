@@ -13,7 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-@EnableFeignClients // Registering service as eureka client
+@EnableFeignClients // Enabling feign client
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @EnableConfigurationProperties(value = {AccountContactRecordInfo.class})
 @OpenAPIDefinition(
