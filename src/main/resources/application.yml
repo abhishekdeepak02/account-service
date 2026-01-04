@@ -34,7 +34,7 @@ management:
   info:
     env:
       enabled: true
-
+# Adding properties to register MS as eureka client
 eureka:
   instance:
     preferIpAddress: true
